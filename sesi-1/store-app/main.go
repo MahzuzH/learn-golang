@@ -45,17 +45,18 @@ func main() {
 	//TODO hitung total harga di slicePrices, dan taruh total nya ke variable totalPrice (3)
 	//HINT: gunakan for range pada slice, dan jumlahkan nilainya
 	//start_answer
-	for value := range slicePrices {
-		totalPrice += slicePrices[value]
-		fmt.Println(totalPrice)
+	for price := range slicePrices {
+		totalPrice += slicePrices[price]
 	}
 	//end_answer
 
 	//TODO jika harga lebih besar dari 10000 maka pelanggan akan mendapatkan diskon 1000, lalu cetak total harga nya,
 	// jika tidak maka cetak total harga saja
 	//start_answer
-	if totalPrice >= 10000 {
-		fmt.Print(totalPrice-1000)
+	if totalPrice > 10000 {
+		fmt.Println(totalPrice-1000)
+	} else {
+		fmt.Println(totalPrice)
 	}
 	//end_answer
 }
