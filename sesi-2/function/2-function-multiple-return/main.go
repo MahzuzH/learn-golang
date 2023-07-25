@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Fungsi juga dapat mengembalikan lebih dari satu value
 // TODO: Buatlah fungsi Square
@@ -11,7 +13,11 @@ import "fmt"
 	Square(2,3) --> 4,9
 */
 //start_answer
-
+func Square (a,b int) (int, int) {
+	resulta := a*a
+	resultb := b*b
+	return resulta, resultb
+}
 
 //end_answer
 

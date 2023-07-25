@@ -48,7 +48,11 @@ func (s *Student) averageScore() float64 {
 // TODO: buatlah method printSubjects yang akan mencetak seluruh subject yang diambil oleh object student
 // Output: Kalkulus, Alpro, ASD, Kewarganegaraan
 //start_answer
-
+func (s *Student) printSubjects() {
+	for _, subject := range s.subjects {
+		fmt.Printf("%s,", subject.subjectName)
+	}
+}
 
 //end_answer
 
@@ -85,5 +89,5 @@ func main() {
 
 	fmt.Printf("Nilai rata-rata :%f", regina.averageScore()) // cara pemanggilan method yang menempel dengan cara regina.averageScore()
 	fmt.Println()
-	regina.printSubjects() // Kalkulus,Alpro,ASD,Kewarganegaraan,
+	regina.printSubjects() // Kalkulus,Alpro,ASD,Kewarganegaraan,s
 }

@@ -14,7 +14,13 @@ func main() {
 	isMarried := true
 
 	//TODO: Dari variable yang telah diberikan, kamu dapat mencoba untuk menggunakan address operator dan indirect operator.
-	//start_answer
-	
+	//start_answers
+	pointerName := &name
+	pointerAge := &age
+	pointerIsMarried := &isMarried
+
+	fmt.Println(&pointerName, *pointerName)
+	fmt.Println(&pointerAge, *pointerAge)
+	fmt.Println(&pointerIsMarried, *pointerIsMarried)
 	//end_answer
 }

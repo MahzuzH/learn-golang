@@ -14,7 +14,9 @@ func nonPointer(a int) {
 
 //TODO: Buatlah fungsi pointer yang menerima pointer int dan ubah nilainya
 //start_answer
-
+func pointer (a *int) {
+	*a = 10
+}
 //end_answer
 
 func main() {
