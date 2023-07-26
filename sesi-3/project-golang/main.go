@@ -10,7 +10,7 @@ func main() {
 		NIM:  "123",
 		Name: "Budi",
 		Age:  20,
-		IPK:  3.5,
+		IPK:  4.1,
 	}
 
 	status, err := budi.GraduationStatus()

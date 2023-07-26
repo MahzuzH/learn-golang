@@ -17,9 +17,15 @@ func (s *Student) GraduationStatus() (string, error) {
 	*/
 
 	//start_answer
-
+	if s.IPK < 0 || s.IPK > 4.0 {
+		return "Nilai IPK tidak valid", nil
+	} else if s.IPK >= 3.5 {
+		return "Summa Cumlaude", nil
+	} else if s.IPK >= 3.0 {
+		return "Cumlaude", nil
+	} else if s.IPK >= 2.5 {
+		return "Memuaskan", nil
+	}
 	//end_answer
-
 	return "", nil //TODO: replace this
-
 }

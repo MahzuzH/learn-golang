@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 /*
@@ -18,9 +19,15 @@ func ConvertToInt(number string) (int, error) {
 	var returnInt int
 	var err error
 
-	//TODO: isi variabel returnInt dan err dengan hasil konversi number ke int menggunakan strconv.Atoi
+	//TODO isi variabel returnInt dan err dengan hasil konversi number ke int menggunakan strconv.Atoi
 	//start_answer
-
+	returnInt, err = strconv.Atoi(number)
+	
+	if err != nil {
+		return 0, err
+	} else {
+		return returnInt, nil
+	}
 	//end_answer
 }
 

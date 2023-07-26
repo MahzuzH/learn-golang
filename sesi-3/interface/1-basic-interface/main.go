@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 /*
 	Teman-teman sudah belajar interface di materi sebelumnya, dan sekarang saatnya untuk mengimplementasikan interface tersebut.
@@ -33,7 +36,13 @@ func (e *Employee) CalculateTax() (float64, error) {
 		Jika salary < 0 maka return error "salary cannot be negative"
 	*/
 	//start_answer
-
+	if e.Salary < 1000 {
+		return 0.1 * e.Salary, nil
+	} else if e.Salary >= 1000 {
+		return  0.2 * e.Salary, nil
+	} else {
+		return 0, errors.New("salary cannot be negative")
+	}
 	//end_answer
 }
 
